@@ -1,0 +1,85 @@
+#TAREA1 NOTEPAD++
+<HTML>
+       <HEAD>
+	<TITLE> BIENVENIDOS </TITLE>
+      </HEAD>
+	<BODY>
+	       SALUDO EN HTML <br>
+	       <?php
+	      echo'SALUDOS DESDE PHP <br>';
+	      print("Saludos desde php <br>");
+	      ?>
+	   </BODY>
+</HTML>
+_____________________________________________________
+#TAREA 2 NOTEPAD++
+<?php
+print "CÁLCULO DE LAS SOLUCIONES DE UNA EC. CUADRÁTICA <br>";
+
+$a=5;
+$b=2;
+$c=10;
+if(($a==0) && ($b==0) && ($c==0))
+	echo "Es una tautología y existen infinitas soluciones <br>";
+else if (($a==0) && ($b==0) && ($c!=0))
+	echo "Es una contradicción y no hay solución <br>";
+else if (($a==0) && ($b!=0))
+	echo "Existe una única solución x= ".(-$c)/($b)."<br>";
+else if (($a!=0) && ($c==0))
+	{
+	echo "Existen dos soluciones: ";
+	echo "x1=0"."<br>";
+	echo "x2= ".(-$b)/($a)."<br>";
+	}
+	else
+	{ 
+	  $Re=(-$b)/(2*$a);
+	  $Disc=pow($b,2)-(4*$a*$c);
+	  $Im=sqrt(abs(($Disc)/(2*$a)));
+	  if($Disc>=0)
+	  {
+	  echo "Las soluciones son reales <br>";
+	  print("x1".($Re+$Im)."<br>");
+	  print("x2".($Re-$Im)."<br>");
+	  }
+		else
+		{
+		    print( "Las soluciones son complejas <br>");
+			echo "x1= (".$Re." +i ".$Im.")<br>";
+			echo "x2= (".$Re." -i ".$Im.")<br>";
+		}
+	}
+?>
+_________________________________________________________________________________________
+#TAREA 3 NOTEPAD++
+<?php
+print("FACTORIAL DE UN NÚMERO <br>");
+$num = 6; 
+    $fac = 1; 
+    for ($i = 1; $i <= $num; $i++)
+	{ 
+      $fac = $fac * $i; 
+    } 
+  
+ 
+  print "EL FACTORIAL DE " .$numero." ES: ".$fac ; 
+?> 
+_____________________________________________________________________________________________
+#TAREA 4 MY SQL BROWSER
+Con las tablas CAJA, DULCES Y CAJAS, hacer una consulta que muestre los dulces y los 
+detalles de los dulces con los que se integre la CAJA
+
+Select CAJA.CAJA_ID, CAJAS.CAJA.NOMB,CAJAS.CAJA_PREC,
+CAJAS.CANTIDAD,CAJAS.PESO,DULCES.DULCE_ID,DULCES.NOMBRE,
+DULCES.DESCRIPC,DULCES.COSTE
+FROM DULCES, CAJA, CAJAS
+WHERE (CAJA.CAJA_ID=CAJAS.CAJA_ID) AND (DULCES.DULCE_ID=CAJA.DULCE_ID)
+ORDER BY DULCES.NOMBRE
+
+_________________________________________________________________________________________________
+#TAREA 5 HACER RELACIONES ENTRE LAS TABLAS
+
+
+
+
+
