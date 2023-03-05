@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { onSnapshot,
 	collection,
 	addDoc,
@@ -113,6 +113,10 @@ const [reservations, setReservations] = useState('');
   addDoc(collection(db, 'reservations'), newReservation)
   getData() // actualiza la lista de reservas después de agregar una nueva
 }
+
+ useEffect(() => {
+    getData()
+  }, [])
 
   return (
     <Modal show={props.isOpen} onHide={props.onClose} 
